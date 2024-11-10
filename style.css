@@ -1,0 +1,275 @@
+@font-face {
+  src: url("valonik-valonik-regular-400.eot");
+  src: url("valonik-valonik-regular-400.eot?#iefix") format("embedded-opentype"), url("valonik-valonik-regular-400.svg#valonik-valonik-regular-400") format("svg"), url("valonik-valonik-regular-400.ttf") format("truetype"), url("valonik-valonik-regular-400.woff") format("woff"), url("valonik-valonik-regular-400.woff2") format("woff2");
+  font-family: "valonik-valonik-regular-400";
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  src: url("valonik-valonik-semibold-600.eot");
+  src: url("valonik-valonik-semibold-600.eot?#iefix") format("embedded-opentype"), url("valonik-valonik-semibold-600.svg#valonik-valonik-semibold-600") format("svg"), url("valonik-valonik-semibold-600.ttf") format("truetype"), url("valonik-valonik-semibold-600.woff") format("woff"), url("valonik-valonik-semibold-600.woff2") format("woff2");
+  font-family: "valonik-valonik-semibold-600";
+  font-style: normal;
+  font-weight: normal;
+}
+* {
+  box-sizing: border-box;
+}
+
+div,
+header {
+  display: flex;
+  font-family: "valonik-valonik-regular-400";
+}
+
+body,
+html,
+h1,
+h2 {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  font-family: "valonik-valonik-regular-400";
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 25px;
+  background: #000000;
+}
+body.no-scroll {
+  overflow: hidden;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-wrapper .content {
+  max-width: 1180px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.page-wrapper .content.inline {
+  flex-flow: row wrap;
+}
+
+.banner {
+  position: relative;
+}
+.banner .image {
+  width: 100%;
+}
+.banner .image img {
+  width: 100%;
+}
+.banner .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+}
+.banner .logo img {
+  height: 100%;
+  padding: 30px;
+}
+
+.relative-for-logo {
+  position: relative;
+}
+
+.logo-on-side {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  right: 30px;
+}
+
+.title {
+  font-family: "valonik-valonik-semibold-600";
+  font-size: 33px;
+  line-height: 33px;
+  color: #ff0000;
+}
+.title.white {
+  color: #ffffff;
+}
+.title.alternative-font {
+  font-family: "valonik-valonik-regular-400";
+  color: #000000;
+}
+@media only screen and (min-width: 992px) {
+  .title {
+    font-size: 33px;
+    line-height: 33px;
+  }
+}
+
+.title-with-background {
+  background: #fcff00;
+  padding: 15px;
+}
+.title-with-background.blue {
+  background: #0000ff;
+}
+
+.text {
+  text-align: center;
+}
+
+.arrow {
+  width: 50px;
+  height: 50px;
+  margin: 0 60px;
+}
+
+.share {
+  width: 60px;
+  height: 60px;
+}
+
+.form-container {
+  background: #fcff00;
+  max-width: 830px;
+}
+.form-container form {
+  display: flex;
+  flex-flow: row wrap;
+}
+.form-container form .form-box {
+  width: 50%;
+  padding: 30px;
+  align-items: center;
+}
+.form-container form .input {
+  background: transparent;
+  border: 1px solid #888888;
+  border-radius: 0;
+  padding: 15px;
+  width: 100%;
+  min-height: 52px;
+}
+.form-container form .checkbox {
+  appearance: none;
+  background: transparent;
+  border: 1px solid #888888;
+  border-radius: 0;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+.form-container form .checkbox:checked {
+  background-color: #888888;
+}
+.form-container form button {
+  background: #ff0000;
+  color: #ffffff;
+  border: 0;
+  border-radius: 0;
+  width: 100%;
+  min-height: 52px;
+  text-align: left;
+  padding: 15px;
+  font-family: "valonik-valonik-regular-400";
+  cursor: pointer;
+}
+.form-container form label {
+  color: #888888;
+  font-size: x-small;
+  cursor: pointer;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 1180px;
+  padding: 60px 0;
+}
+.slider-container .hide {
+  width: 33.3333333333%;
+  padding: 0 40px;
+  visibility: hidden;
+}
+.slider-container .card {
+  position: absolute;
+  top: 60px;
+  width: 33.3333333333%;
+  padding: 0 40px;
+  opacity: 0.5;
+  transition: opacity 0.3s, left 0.3s;
+}
+.slider-container .card.active {
+  opacity: 1;
+  transform: scale(1.2);
+}
+.slider-container .card img {
+  width: 100%;
+}
+.slider-container button.prev,
+.slider-container button.next {
+  background-color: #fcff00;
+  color: #000000;
+  border: none;
+  padding: 10px;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+.slider-container button.prev:hover,
+.slider-container button.next:hover {
+  opacity: 1;
+}
+.slider-container button.prev.prev,
+.slider-container button.next.prev {
+  left: 0;
+}
+.slider-container button.prev.next,
+.slider-container button.next.next {
+  right: 0;
+}
+
+.slider-dots .dot {
+  background: #0000ff;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  margin: 10px;
+}
+.slider-dots .dot.active {
+  background: #ff0000;
+}
+
+.spacer-sm {
+  width: 100%;
+  height: 40px;
+}
+.spacer-sm.desktop {
+  display: none;
+}
+@media only screen and (min-width: 992px) {
+  .spacer-sm.desktop {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
