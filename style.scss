@@ -173,7 +173,8 @@ body {
 
 .title-with-background {
   background: $yellow;
-  padding: calc($padding / 2);
+  padding: calc($padding / 2) $padding;
+  margin-top: calc($padding / 3);
 
   &.blue {
     background: $blue;
@@ -195,6 +196,12 @@ body {
 .share {
   width: 60px;
   height: 60px;
+}
+
+// ------ Text ------
+
+.text p {
+  font-family: Helvetica;
 }
 
 // ---------------- Form ---------------

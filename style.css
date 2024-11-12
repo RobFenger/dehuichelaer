@@ -111,7 +111,8 @@ body.no-scroll {
 
 .title-with-background {
   background: #fcff00;
-  padding: 15px;
+  padding: 15px 30px;
+  margin-top: 10px;
 }
 .title-with-background.blue {
   background: #0000ff;
@@ -130,6 +131,10 @@ body.no-scroll {
 .share {
   width: 60px;
   height: 60px;
+}
+
+.text p {
+  font-family: Helvetica;
 }
 
 .form-container {
