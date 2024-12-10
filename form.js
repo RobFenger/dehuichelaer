@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       // Verstuur JSON-gegevens naar het endpoint
-      const response = await fetch("http://localhost:8080/petition", {
+      const response = await fetch("https://thepath.robfenger.nl/petition", {
         method: "POST",
         headers: {
           "Content-Type": "application/json", // Geef aan dat we JSON verzenden

@@ -238,7 +238,7 @@ body {
   max-width: $maxWidthFormContainer;
   margin: calc($padding / 2);
 
-  @media #{bp-md} {
+  @media #{$bp-md} {
     margin: 0;
   }
 
@@ -251,7 +251,7 @@ body {
       padding: calc($padding / 2);
       align-items: center;
 
-      @media #{bp-md} {
+      @media #{$bp-md} {
         width: 50%;
         padding: $padding;
       }
@@ -377,6 +377,7 @@ $sliderDotWidth: 10px;
     &.prev {
       right: calc(100% / 3 * 2);
       @media #{$bp-md} {
+        right: auto;
         left: 0;
       }
     }
@@ -384,6 +385,7 @@ $sliderDotWidth: 10px;
     &.next {
       left: calc(100% / 3 * 2);
       @media #{$bp-md} {
+        left: auto;
         right: 0;
       }
     }

@@ -169,7 +169,7 @@ function prevSlide() {
 // Initialiseer de actieve kaart bij laden
 updateCards();
 
-const sliderContainer = document.querySelector("slider-container");
+const sliderContainer = document.querySelector(".slider-container");
 
 sliderContainer.addEventListener("swiped-right", nextSlide);
 sliderContainer.addEventListener("swiped-left", prevSlide);
