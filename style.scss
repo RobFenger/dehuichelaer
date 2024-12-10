@@ -61,6 +61,8 @@ $formTextColor: #888888;
 
 $marginForCards: 40px;
 
+$sliderContainerWidth: 200%;
+
 * {
   box-sizing: border-box;
 }
@@ -96,8 +98,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 
   .content {
+    padding: 0 calc($padding / 2);
+    @media #{$bp-md} {
+      padding: 0;
+    }
+
     max-width: $maxWidth;
     display: flex;
     flex-flow: column nowrap;
@@ -105,6 +113,7 @@ body {
 
     &.inline {
       flex-flow: row wrap;
+      justify-content: center;
     }
   }
 }
@@ -115,9 +124,15 @@ body {
   position: relative;
   .image {
     width: 100%;
+    min-height: 200px;
+
+    @media #{$bp-md} {
+      min-height: auto;
+    }
 
     img {
       width: 100%;
+      object-fit: cover;
     }
   }
 
@@ -138,19 +153,31 @@ body {
 // ------------- Logo on the side ------------
 
 .relative-for-logo {
+  display: none;
+
+  @media #{$bp-md} {
+    display: flex;
+  }
+
   position: relative;
 }
 
 .logo-on-side {
-  position: absolute;
-  height: $logoOnSideWidth;
-  width: $logoOnSideWidth;
-  right: $padding;
+  display: none;
+
+  @media #{$bp-md} {
+    display: flex;
+    position: absolute;
+    height: $logoOnSideWidth;
+    width: $logoOnSideWidth;
+    right: $padding;
+  }
 }
 
 // ------------- Title --------------
 
 .title {
+  text-align: center;
   font-family: $titleFontFamily;
   font-size: $titleFontSizeMobile;
   line-height: $titleLineHeightMobile;
@@ -209,15 +236,25 @@ body {
 .form-container {
   background: $yellow;
   max-width: $maxWidthFormContainer;
+  margin: calc($padding / 2);
+
+  @media #{bp-md} {
+    margin: 0;
+  }
 
   form {
     display: flex;
     flex-flow: row wrap;
 
     .form-box {
-      width: 50%;
-      padding: $padding;
+      width: 100%;
+      padding: calc($padding / 2);
       align-items: center;
+
+      @media #{bp-md} {
+        width: 50%;
+        padding: $padding;
+      }
     }
 
     .input {
@@ -270,13 +307,21 @@ $marginForSliderContainer: calc($padding * 2);
 $sliderDotWidth: 10px;
 
 .slider-container {
+  width: $sliderContainerWidth;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media #{$bp-md} {
+    width: 100%;
+    left: 0;
+    transform: none;
+  }
+
   display: flex;
   align-items: center;
-  width: 100%;
   margin: auto;
   overflow: hidden;
   position: relative;
-  width: 100%;
   max-width: $maxWidth;
   padding: $marginForSliderContainer 0;
 
@@ -330,11 +375,17 @@ $sliderDotWidth: 10px;
     }
 
     &.prev {
-      left: 0;
+      right: calc(100% / 3 * 2);
+      @media #{$bp-md} {
+        left: 0;
+      }
     }
 
     &.next {
-      right: 0;
+      left: calc(100% / 3 * 2);
+      @media #{$bp-md} {
+        right: 0;
+      }
     }
   }
 }
