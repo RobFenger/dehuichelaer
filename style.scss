@@ -146,6 +146,7 @@ body {
     img {
       height: 100%;
       padding: $padding;
+      animation: rotatecircle 1s ease-in-out;
     }
   }
 }
@@ -164,6 +165,10 @@ body {
 
 .logo-on-side {
   display: none;
+
+  &.in-view img {
+    animation: rotatecircle 0.8s ease-in;
+  }
 
   @media #{$bp-md} {
     display: flex;
@@ -218,6 +223,7 @@ body {
   width: 50px;
   height: 50px;
   margin: 0 calc($padding * 2);
+  animation: upanddown 1s infinite alternate;
 }
 
 .share {
@@ -419,4 +425,105 @@ $sliderDotWidth: 10px;
       display: flex;
     }
   }
+}
+
+// -------------- Animations ----------------
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    width: 0px;
+  }
+  20% {
+    opacity: 1;
+    width: 0px;
+  }
+  30% {
+    width: 355px;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 355px;
+  }
+}
+
+@keyframes showup {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slidein {
+  0% {
+    margin-left: -800px;
+  }
+
+  80% {
+    margin-left: 100px;
+  }
+
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@keyframes slideintight {
+  0% {
+    transform: translateX(-100px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes upanddown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes rotatecircle {
+  0% {
+    transform: rotate(0) scale(0);
+  }
+
+  80% {
+    transform: rotate(400deg);
+  }
+  90% {
+    transform: rotate(400deg);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.title.inline.content {
+  .title.in-view:first-child {
+    animation: showup 1s ease-in-out;
+  }
+
+  .title.in-view:last-child {
+    animation: slidein 1s ease-in-out;
+  }
+}
+
+.slide-in-left.in-view {
+  animation: slideintight 300ms reverse ease-in;
+}
+
+.slide-in-right.in-view {
+  animation: slideintight 300ms ease-in;
 }

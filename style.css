@@ -91,6 +91,7 @@ body.no-scroll {
 .banner .logo img {
   height: 100%;
   padding: 30px;
+  animation: rotatecircle 1s ease-in-out;
 }
 
 .relative-for-logo {
@@ -105,6 +106,9 @@ body.no-scroll {
 
 .logo-on-side {
   display: none;
+}
+.logo-on-side.in-view img {
+  animation: rotatecircle 0.8s ease-in;
 }
 @media only screen and (min-width: 992px) {
   .logo-on-side {
@@ -154,6 +158,7 @@ body.no-scroll {
   width: 50px;
   height: 50px;
   margin: 0 60px;
+  animation: upanddown 1s infinite alternate;
 }
 
 .share {
@@ -337,6 +342,90 @@ body.no-scroll {
   .spacer-sm.desktop {
     display: flex;
   }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    width: 0px;
+  }
+  20% {
+    opacity: 1;
+    width: 0px;
+  }
+  30% {
+    width: 355px;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 355px;
+  }
+}
+@keyframes showup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slidein {
+  0% {
+    margin-left: -800px;
+  }
+  80% {
+    margin-left: 100px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+@keyframes slideintight {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes upanddown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes rotatecircle {
+  0% {
+    transform: rotate(0) scale(0);
+  }
+  80% {
+    transform: rotate(400deg);
+  }
+  90% {
+    transform: rotate(400deg);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+.title.inline.content .title.in-view:first-child {
+  animation: showup 1s ease-in-out;
+}
+.title.inline.content .title.in-view:last-child {
+  animation: slidein 1s ease-in-out;
+}
+
+.slide-in-left.in-view {
+  animation: slideintight 300ms reverse ease-in;
+}
+
+.slide-in-right.in-view {
+  animation: slideintight 300ms ease-in;
 }
 
 /*# sourceMappingURL=style.css.map */
