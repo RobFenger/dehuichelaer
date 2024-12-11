@@ -462,15 +462,15 @@ $sliderDotWidth: 10px;
 
 @keyframes slidein {
   0% {
-    margin-left: -800px;
+    transform: translate(-800px);
   }
 
   80% {
-    margin-left: 100px;
+    transform: translate(100px);
   }
 
   100% {
-    margin-left: 0px;
+    transform: translate(0);
   }
 }
 
