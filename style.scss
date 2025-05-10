@@ -23,6 +23,8 @@
 
 @include fonts("valonik-valonik-regular-400", "valonik-valonik-regular-400");
 @include fonts("valonik-valonik-semibold-600", "valonik-valonik-semibold-600");
+@include fonts("helvetica-neue-regular", "helvetica-neue-regular");
+@include fonts("DrukTextTrial-Medium", "DrukTextTrial-Medium");
 
 $bp-md: "only screen and (min-width: 992px)";
 $padding: 30px;
@@ -33,8 +35,8 @@ $yellow: #fcff00;
 $red: #ff0000;
 $blue: #0000ff;
 
-$titleFontFamily: "valonik-valonik-semibold-600";
-$fontFamily: "valonik-valonik-regular-400";
+$titleFontFamily: "DrukTextTrial-Medium";
+$fontFamily: "helvetica-neue-regular";
 $titleFontSize: 33px;
 $titleFontSizeMobile: 33px;
 $titleLineHeight: 33px;
@@ -80,6 +82,11 @@ h2 {
   padding: 0;
   margin: 0;
   border: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
 }
 
 body {
@@ -114,8 +121,27 @@ body {
     &.inline {
       flex-flow: row wrap;
       justify-content: center;
+
+      &.no-wrap {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+      }
+    }
+
+    &.from-bottom {
+      align-items: end;
+    }
+
+    .padding-bottom {
+      padding-bottom: calc($padding / 3);
     }
   }
+}
+
+// Kapitein image
+
+.kapitein {
+  max-width: 165px;
 }
 
 // ----------------- Banner ------------------
@@ -145,7 +171,7 @@ body {
 
     img {
       height: 100%;
-      padding: $padding;
+      padding: $padding * 1.5;
       animation: rotatecircle 1s ease-in-out;
     }
   }
@@ -242,11 +268,6 @@ body {
 .form-container {
   background: $yellow;
   max-width: $maxWidthFormContainer;
-  margin: calc($padding / 2);
-
-  @media #{$bp-md} {
-    margin: 0;
-  }
 
   form {
     display: flex;
