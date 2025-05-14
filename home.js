@@ -87,6 +87,19 @@
   }
 })(window, document);
 
+const box = document.getElementById("box");
+
+window.addEventListener("scroll", () => {
+  const maxScroll = document.body.scrollHeight - window.innerHeight;
+  const scrollTop = window.scrollY;
+  const scrollFraction = scrollTop / maxScroll;
+
+  const maxRotation = 720;
+  const rotation = scrollFraction * maxRotation;
+
+  box.style.transform = `translate(-50%, -50%) rotate(${rotation}deg)`;
+});
+
 const cards = document.querySelectorAll(".card");
 const dots = document.querySelectorAll(".dot");
 
