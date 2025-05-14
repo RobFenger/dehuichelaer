@@ -1,28 +1,28 @@
 @font-face {
   src: url("valonik-valonik-regular-400.eot");
-  src: url("valonik-valonik-regular-400.eot?#iefix") format("embedded-opentype"), url("valonik-valonik-regular-400.svg#valonik-valonik-regular-400") format("svg"), url("valonik-valonik-regular-400.ttf") format("truetype"), url("valonik-valonik-regular-400.woff") format("woff"), url("valonik-valonik-regular-400.woff2") format("woff2");
+  src: url("valonik-valonik-regular-400.eot?#iefix") format("embedded-opentype"), url("valonik-valonik-regular-400.svg#valonik-valonik-regular-400") format("svg"), url("valonik-valonik-regular-400.ttf") format("truetype"), url("valonik-valonik-regular-400.woff") format("woff"), url("valonik-valonik-regular-400.woff2") format("woff2"), url("valonik-valonik-regular-400.otf") format("opentype");
   font-family: "valonik-valonik-regular-400";
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
   src: url("valonik-valonik-semibold-600.eot");
-  src: url("valonik-valonik-semibold-600.eot?#iefix") format("embedded-opentype"), url("valonik-valonik-semibold-600.svg#valonik-valonik-semibold-600") format("svg"), url("valonik-valonik-semibold-600.ttf") format("truetype"), url("valonik-valonik-semibold-600.woff") format("woff"), url("valonik-valonik-semibold-600.woff2") format("woff2");
+  src: url("valonik-valonik-semibold-600.eot?#iefix") format("embedded-opentype"), url("valonik-valonik-semibold-600.svg#valonik-valonik-semibold-600") format("svg"), url("valonik-valonik-semibold-600.ttf") format("truetype"), url("valonik-valonik-semibold-600.woff") format("woff"), url("valonik-valonik-semibold-600.woff2") format("woff2"), url("valonik-valonik-semibold-600.otf") format("opentype");
   font-family: "valonik-valonik-semibold-600";
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
   src: url("helvetica-neue-regular.eot");
-  src: url("helvetica-neue-regular.eot?#iefix") format("embedded-opentype"), url("helvetica-neue-regular.svg#helvetica-neue-regular") format("svg"), url("helvetica-neue-regular.ttf") format("truetype"), url("helvetica-neue-regular.woff") format("woff"), url("helvetica-neue-regular.woff2") format("woff2");
+  src: url("helvetica-neue-regular.eot?#iefix") format("embedded-opentype"), url("helvetica-neue-regular.svg#helvetica-neue-regular") format("svg"), url("helvetica-neue-regular.ttf") format("truetype"), url("helvetica-neue-regular.woff") format("woff"), url("helvetica-neue-regular.woff2") format("woff2"), url("helvetica-neue-regular.otf") format("opentype");
   font-family: "helvetica-neue-regular";
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
-  src: url("DrukTextTrial-Medium.eot");
-  src: url("DrukTextTrial-Medium.eot?#iefix") format("embedded-opentype"), url("DrukTextTrial-Medium.svg#DrukTextTrial-Medium") format("svg"), url("DrukTextTrial-Medium.ttf") format("truetype"), url("DrukTextTrial-Medium.woff") format("woff"), url("DrukTextTrial-Medium.woff2") format("woff2");
-  font-family: "DrukTextTrial-Medium";
+  src: url("druktexttrial-medium.eot");
+  src: url("druktexttrial-medium.eot?#iefix") format("embedded-opentype"), url("druktexttrial-medium.svg#druktexttrial-medium") format("svg"), url("druktexttrial-medium.ttf") format("truetype"), url("druktexttrial-medium.woff") format("woff"), url("druktexttrial-medium.woff2") format("woff2"), url("druktexttrial-medium.otf") format("opentype");
+  font-family: "druktexttrial-medium";
   font-style: normal;
   font-weight: normal;
 }
@@ -79,6 +79,9 @@ body.no-scroll {
     padding: 0;
   }
 }
+.page-wrapper .content.narrow {
+  max-width: 780px;
+}
 .page-wrapper .content.inline {
   flex-flow: row wrap;
   justify-content: center;
@@ -86,12 +89,22 @@ body.no-scroll {
 .page-wrapper .content.inline.no-wrap {
   flex-flow: row nowrap;
   justify-content: space-between;
+  width: 100%;
 }
 .page-wrapper .content.from-bottom {
   align-items: end;
 }
 .page-wrapper .content .padding-bottom {
   padding-bottom: 10px;
+}
+
+.no-mobile {
+  display: none;
+}
+@media only screen and (min-width: 992px) {
+  .no-mobile {
+    display: flex;
+  }
 }
 
 .kapitein {
@@ -155,17 +168,28 @@ body.no-scroll {
 
 .title {
   text-align: center;
-  font-family: "DrukTextTrial-Medium";
-  font-size: 33px;
-  line-height: 33px;
+  font-family: "druktexttrial-medium";
+  font-size: 25px;
+  line-height: 25px;
   color: #ff0000;
 }
 .title.white {
   color: #ffffff;
 }
+.title.black {
+  color: #000000;
+}
 .title.alternative-font {
   font-family: "helvetica-neue-regular";
   color: #000000;
+}
+.title.big {
+  font-size: 31px;
+}
+@media only screen and (min-width: 992px) {
+  .title.big {
+    font-size: 39px;
+  }
 }
 @media only screen and (min-width: 992px) {
   .title {
@@ -178,9 +202,20 @@ body.no-scroll {
   background: #fcff00;
   padding: 15px 30px;
   margin-top: 10px;
+  font-size: 25px;
+  line-height: 25px;
 }
 .title-with-background.blue {
   background: #0000ff;
+}
+.title-with-background.red {
+  background: #ff0000;
+}
+@media only screen and (min-width: 992px) {
+  .title-with-background {
+    font-size: 33px;
+    line-height: 33px;
+  }
 }
 
 .text {
@@ -205,7 +240,7 @@ body.no-scroll {
 
 .form-container {
   background: #fcff00;
-  max-width: 830px;
+  max-width: 780px;
 }
 .form-container form {
   display: flex;

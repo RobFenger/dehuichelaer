@@ -10,7 +10,8 @@
     src: url($font + ".eot?#iefix") format("embedded-opentype"),
       url($font + ".svg#" + $font) format("svg"),
       url($font + ".ttf") format("truetype"),
-      url($font + ".woff") format("woff"), url($font + ".woff2") format("woff2");
+      url($font + ".woff") format("woff"), url($font + ".woff2") format("woff2"),
+      url($font + ".otf") format("opentype");
     font-family: $font-family;
     font-style: $font-style;
     font-weight: $font-weight;
@@ -24,7 +25,7 @@
 @include fonts("valonik-valonik-regular-400", "valonik-valonik-regular-400");
 @include fonts("valonik-valonik-semibold-600", "valonik-valonik-semibold-600");
 @include fonts("helvetica-neue-regular", "helvetica-neue-regular");
-@include fonts("DrukTextTrial-Medium", "DrukTextTrial-Medium");
+@include fonts("druktexttrial-medium", "druktexttrial-medium");
 
 $bp-md: "only screen and (min-width: 992px)";
 $padding: 30px;
@@ -35,18 +36,19 @@ $yellow: #fcff00;
 $red: #ff0000;
 $blue: #0000ff;
 
-$titleFontFamily: "DrukTextTrial-Medium";
+$titleFontFamily: "druktexttrial-medium";
 $fontFamily: "helvetica-neue-regular";
 $titleFontSize: 33px;
-$titleFontSizeMobile: 33px;
+$titleFontSizeMobile: 25px;
 $titleLineHeight: 33px;
-$titleLineHeightMobile: 33px;
+$titleLineHeightMobile: 25px;
 // $h2FontSize: 50px;
 // $h2FontSizeMobile: 40px;
 // $h2LineHeight: 50px;
 // $h2LineHeightMobile: 40px;
 
 $maxWidth: 1180px;
+$narrowWidth: 780px;
 $spacerSm: 40px;
 $spacerMd: 80px;
 $fontSize: 16px;
@@ -57,7 +59,7 @@ $checkBoxWidth: 20px;
 
 $logoOnSideWidth: 200px;
 
-$maxWidthFormContainer: 830px;
+$maxWidthFormContainer: 780px;
 
 $formTextColor: #888888;
 
@@ -118,6 +120,10 @@ body {
     flex-flow: column nowrap;
     align-items: center;
 
+    &.narrow {
+      max-width: $narrowWidth;
+    }
+
     &.inline {
       flex-flow: row wrap;
       justify-content: center;
@@ -125,6 +131,7 @@ body {
       &.no-wrap {
         flex-flow: row nowrap;
         justify-content: space-between;
+        width: 100%;
       }
     }
 
@@ -135,6 +142,14 @@ body {
     .padding-bottom {
       padding-bottom: calc($padding / 3);
     }
+  }
+}
+
+.no-mobile {
+  display: none;
+
+  @media #{$bp-md} {
+    display: flex;
   }
 }
 
@@ -218,9 +233,21 @@ body {
     color: $white;
   }
 
+  &.black {
+    color: $black;
+  }
+
   &.alternative-font {
     font-family: $fontFamily;
     color: $black;
+  }
+
+  &.big {
+    font-size: $titleFontSizeMobile + 6px;
+
+    @media #{$bp-md} {
+      font-size: $titleFontSize + 6px;
+    }
   }
 
   @media #{$bp-md} {
@@ -233,9 +260,20 @@ body {
   background: $yellow;
   padding: calc($padding / 2) $padding;
   margin-top: calc($padding / 3);
+  font-size: $titleFontSizeMobile;
+  line-height: $titleLineHeightMobile;
 
   &.blue {
     background: $blue;
+  }
+
+  &.red {
+    background: $red;
+  }
+
+  @media #{$bp-md} {
+    font-size: $titleFontSize;
+    line-height: $titleLineHeight;
   }
 }
 
