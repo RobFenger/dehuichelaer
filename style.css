@@ -128,7 +128,7 @@ body.no-scroll {
     max-height: 400px;
   }
 }
-@media only screen and (min-width: 1184px) {
+@media only screen and (min-width: 1500px) {
   .banner .image {
     max-height: 600px;
   }

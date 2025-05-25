@@ -27,7 +27,7 @@
 @include fonts("helvetica-neue-regular", "helvetica-neue-regular");
 @include fonts("druktexttrial-medium", "druktexttrial-medium");
 
-$bp-lg: "only screen and (min-width: 1184px)";
+$bp-lg: "only screen and (min-width: 1500px)";
 $bp-md: "only screen and (min-width: 992px)";
 $bp-sm: "only screen and (min-width: 768px)";
 $padding: 30px;
