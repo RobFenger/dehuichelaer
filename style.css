@@ -119,13 +119,18 @@ body.no-scroll {
   position: relative;
 }
 .banner .image {
-  width: 100%;
+  width: 100vw;
   min-height: 200px;
 }
 @media only screen and (min-width: 768px) {
   .banner .image {
     min-height: auto;
     max-height: 400px;
+  }
+}
+@media only screen and (min-width: 1184px) {
+  .banner .image {
+    max-height: 600px;
   }
 }
 .banner .image img {

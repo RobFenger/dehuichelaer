@@ -27,6 +27,7 @@
 @include fonts("helvetica-neue-regular", "helvetica-neue-regular");
 @include fonts("druktexttrial-medium", "druktexttrial-medium");
 
+$bp-lg: "only screen and (min-width: 1184px)";
 $bp-md: "only screen and (min-width: 992px)";
 $bp-sm: "only screen and (min-width: 768px)";
 $padding: 30px;
@@ -169,13 +170,18 @@ body {
 
 .banner {
   position: relative;
+
   .image {
-    width: 100%;
+    width: 100vw;
     min-height: 200px;
 
     @media #{$bp-sm} {
       min-height: auto;
       max-height: 400px;
+    }
+
+    @media #{$bp-lg} {
+      max-height: 600px;
     }
 
     img {
