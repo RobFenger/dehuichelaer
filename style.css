@@ -238,9 +238,7 @@ body.no-scroll {
 
 .button-circle {
   position: absolute;
-  left: -35%;
-  top: -87%;
-  width: 165%;
+  width: 150%;
   z-index: -1;
 }
 
