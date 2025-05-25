@@ -302,7 +302,13 @@ body {
 .button-circle {
   position: absolute;
   width: 150%;
+  max-width: 400px;
   z-index: -1;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .text {
