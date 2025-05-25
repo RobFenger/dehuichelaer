@@ -28,11 +28,12 @@
 @include fonts("druktexttrial-medium", "druktexttrial-medium");
 
 $bp-md: "only screen and (min-width: 992px)";
+$bp-sm: "only screen and (min-width: 768px)";
 $padding: 30px;
 
 $black: #000000;
 $white: #ffffff;
-$yellow: #fcff00;
+$yellow: #ffe600;
 $red: #ff0000;
 $blue: #0000ff;
 
@@ -139,6 +140,11 @@ body {
       align-items: end;
     }
 
+    &.negative-margin {
+      margin-top: calc($padding * -0.2);
+      z-index: 1;
+    }
+
     .padding-bottom {
       padding-bottom: calc($padding / 3);
     }
@@ -167,8 +173,9 @@ body {
     width: 100%;
     min-height: 200px;
 
-    @media #{$bp-md} {
+    @media #{$bp-sm} {
       min-height: auto;
+      max-height: 400px;
     }
 
     img {
@@ -182,11 +189,15 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 100%;
+    height: 25%;
+
+    @media #{$bp-md} {
+      height: 40%;
+    }
 
     img {
       height: 100%;
-      padding: $padding * 1.5;
+      // padding: $padding * 1.5;
       // animation: rotatecircle 1s ease-in-out;
       transition: transform 0.1s linear;
     }
@@ -238,16 +249,22 @@ body {
     color: $black;
   }
 
+  &.yellow {
+    color: $yellow;
+  }
+
   &.alternative-font {
     font-family: $fontFamily;
     color: $black;
   }
 
   &.big {
-    font-size: $titleFontSizeMobile + 6px;
+    font-size: $titleFontSizeMobile + 12px;
+    line-height: $titleLineHeightMobile + 12px;
 
     @media #{$bp-md} {
-      font-size: $titleFontSize + 6px;
+      font-size: $titleFontSize + 12px;
+      line-height: $titleLineHeight + 12px;
     }
   }
 
