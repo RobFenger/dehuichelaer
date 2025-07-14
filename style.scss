@@ -166,6 +166,21 @@ body {
   max-width: 165px;
 }
 
+// language switcher
+
+.language-switcher {
+  position: absolute;
+  top: calc(100% + $padding);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: $maxWidth;
+  width: 100%;
+
+  .nl-flag {
+    display: none;
+  }
+}
+
 // ----------------- Banner ------------------
 
 .banner {

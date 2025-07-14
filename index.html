@@ -32,23 +32,35 @@
             src="Webassets_Huichelaar/Huichelaar logos/Huichelaer_sticker_final.png"
           />
         </div>
+
+        <div class="language-switcher" id="language-switcher">
+          <img
+            src="Webassets_Huichelaar/UI Stuff/icons8-netherlands-96.png"
+            alt="Nederlands"
+            onclick="setLanguage('nl')"
+            style="width: 30px; cursor: pointer"
+            class="flag nl-flag"
+            id="nl-flag"
+          />
+          <img
+            src="Webassets_Huichelaar/UI Stuff/en-flag.png"
+            alt="English"
+            onclick="setLanguage('en')"
+            style="width: 30px; cursor: pointer"
+            class="flag en-flag"
+            id="en-flag"
+          />
+        </div>
       </div>
 
       <div class="title inline content narrow negative-margin">
-        <h2 class="title big animation-element">VECHTER VOOR DE&nbsp;</h2>
-        <h2 class="title big white animation-element">VERLOREN ZAAK</h2>
+        <h2 data-i18n="titleOne" class="title big animation-element"></h2>
+        <h2 data-i18n="titleTwo" class="title big white animation-element"></h2>
       </div>
 
       <div class="text content narrow">
-        <p>
-          De ziel van de stad wordt weggevaagd door groot kapitaal en bekende
-          trendy concepten. Zeker in nieuwbouwwijken is inmiddels geen ruimte
-          meer voor kleine, lokale ondernemers.
-        </p>
-        <p>
-          Steun de lokale kleine ondernemer door de petitie te tekenen of een
-          poster te bestellen van jouw favoriete niet-bestaande toko
-        </p>
+        <p data-i18n="descriptionOne"></p>
+        <p data-i18n="descriptionTwo"></p>
       </div>
 
       <div class="spacer-sm"></div>
@@ -60,7 +72,7 @@
 
         <div class="content inline relative">
           <a class="title-with-background yellow" href="#petition">
-            <h2 class="title black">TEKEN DE PETITIE</h2>
+            <h2 data-i18n="petition" class="title black"></h2>
           </a>
 
           <div class="button-circle">
@@ -79,18 +91,11 @@
       <div class="spacer-sm"></div>
 
       <div class="title content narrow">
-        <h2 class="title big yellow">WAAROM?</h2>
+        <h2 data-i18n="why" class="title big yellow"></h2>
       </div>
 
       <div class="text content narrow">
-        <p>
-          De Huichelaer staat op — voor de zaak die een buurt laat leven,
-          verbindt en de eentonigheid durft te doorbreken. We zetten druk op
-          gemeente en ontwikkelaars om de huren te verlagen voor authentieke
-          ondernemers, en bieden gratis campagnemateriaal aan voor wie écht iets
-          wil toevoegen waar behoefte aan is. En daar hebben we jouw hulp bij
-          nodig strijder.
-        </p>
+        <p data-i18n="standUp"></p>
       </div>
 
       <div class="content inline no-wrap from-bottom narrow" id="petition">
@@ -145,10 +150,7 @@
       </div>
 
       <div class="text content narrow">
-        <p>
-          We gebruiken je e-mailadres alleen om je handtekening te bevestigen<br />
-          (en je krijgt geen bevestigingsmail)
-        </p>
+        <p data-i18n="emailNote"></p>
       </div>
 
       <div class="spacer-sm"></div>
@@ -170,10 +172,7 @@
       <div class="spacer-sm relative-for-logo"></div>
 
       <div class="content narrow">
-        <h2 class="title big white">
-          MAAK KENNIS MET DE <br />
-          VERLOREN ZAKEN
-        </h2>
+        <h2 data-i18n="lostBusiness" class="title big white"></h2>
       </div>
 
       <div class="slider-container">
@@ -228,10 +227,7 @@
       <div class="spacer-sm"></div>
 
       <div class="text content narrow">
-        <p>
-          Word ook een Huichelaar en bestel een poster van een niet-bestaande
-          toko of een T-shirt!
-        </p>
+        <p data-i18n="become"></p>
       </div>
 
       <div class="content inline narrow" id="artwork">

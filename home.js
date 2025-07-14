@@ -229,3 +229,65 @@ $(document).ready(function () {
   //trigger our scroll event on initial load
   $(window).trigger("scroll");
 });
+
+// translations
+const translations = {
+  en: {
+    titleOne: "FIGHTER FOR THE\u00A0",
+    titleTwo: "LOST CAUSE",
+    descriptionOne: `The soul of the city is being wiped away by big capital and well-known trendy concepts. Especially in new residential areas, there is no longer any space for small, local entrepreneurs.`,
+    descriptionTwo: `Support the small local entrepreneur by signing the petition or ordering a poster of your favorite non-existent toko.`,
+    petition: `SIGN THE PETITION`,
+    why: "WHY?",
+    standUp: `The Huichelaar rises up for the cause that brings a neighborhood to life,
+    connects people, and dares to break the monotony. We are putting pressure on municipalities and developers to lower rents for authentic entrepreneurs and are offering free campaign materials to those who truly want to contribute something that is needed. And for that, we need your help, fighter.`,
+    emailNote: `We only use your email address to confirm your signature<br/>(and you will not receive a confirmation email)`,
+    lostBusiness: `MEET THE <br/> LOST BUSINESSES`,
+    become: `Become a Huichelaar yourself and order a poster of a non-existent toko or a T-shirt!`,
+  },
+  nl: {
+    titleOne: "VECHTER VOOR DE\u00A0",
+    titleTwo: "VERLOREN ZAAK",
+    descriptionOne: `De ziel van de stad wordt weggevaagd door groot kapitaal en bekende
+    trendy concepten. Zeker in nieuwbouwwijken is inmiddels geen ruimte
+    meer voor kleine, lokale ondernemers.`,
+    descriptionTwo: `Steun de lokale kleine ondernemer door de petitie te tekenen of een
+    poster te bestellen van jouw favoriete niet-bestaande toko`,
+    petition: `TEKEN DE PETITIE`,
+    why: "WAAROM?",
+    standUp: `De Huichelaer staat op voor de zaak die een buurt laat leven,
+    verbindt en de eentonigheid durft te doorbreken. We zetten druk op
+    gemeente en ontwikkelaars om de huren te verlagen voor authentieke
+    ondernemers, en bieden gratis campagnemateriaal aan voor wie écht iets
+    wil toevoegen waar behoefte aan is. En daar hebben we jouw hulp bij
+    nodig strijder.`,
+    emailNote: `We gebruiken je e-mailadres alleen om je handtekening te bevestigen<br/>(en je krijgt geen bevestigingsmail)`,
+    lostBusiness: `MAAK KENNIS MET DE <br />
+    VERLOREN ZAKEN`,
+    become: `Word ook een Huichelaar en bestel een poster van een niet-bestaande
+    toko of een T-shirt!`,
+  },
+};
+
+// -------------
+// language selector
+
+let language = "nl";
+
+enFlag = document.getElementById("en-flag");
+nlFlag = document.getElementById("nl-flag");
+
+function setLanguage(lang) {
+  language = lang;
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    el.innerHTML = translations[lang][key] || `[${key}]`;
+  });
+
+  // TODO: add en flag when on nl and vice versa
+  // if (language == "nl") {
+  //   enFlag;
+  // }
+}
+
+setLanguage(language);

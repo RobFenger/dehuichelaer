@@ -115,6 +115,18 @@ body.no-scroll {
   max-width: 165px;
 }
 
+.language-switcher {
+  position: absolute;
+  top: calc(100% + 30px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1180px;
+  width: 100%;
+}
+.language-switcher .nl-flag {
+  display: none;
+}
+
 .banner {
   position: relative;
 }
