@@ -122,6 +122,15 @@ body.no-scroll {
   transform: translate(-50%, -50%);
   max-width: 1180px;
   width: 100%;
+  z-index: 2;
+}
+.language-switcher .flag {
+  margin-left: 15px;
+}
+@media only screen and (min-width: 992px) {
+  .language-switcher .flag {
+    margin-left: 0;
+  }
 }
 .language-switcher .nl-flag {
   display: none;

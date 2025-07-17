@@ -175,6 +175,15 @@ body {
   transform: translate(-50%, -50%);
   max-width: $maxWidth;
   width: 100%;
+  z-index: 2;
+
+  .flag {
+    margin-left: calc($padding / 2);
+
+    @media #{$bp-md} {
+      margin-left: 0;
+    }
+  }
 
   .nl-flag {
     display: none;

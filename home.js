@@ -272,22 +272,31 @@ const translations = {
 // -------------
 // language selector
 
-let language = "nl";
+document.addEventListener("DOMContentLoaded", () => {
+  enFlag = document.getElementById("en-flag");
+  nlFlag = document.getElementById("nl-flag");
 
-enFlag = document.getElementById("en-flag");
-nlFlag = document.getElementById("nl-flag");
+  const savedLang = localStorage.getItem("lang") || "nl";
+  setLanguage(savedLang);
+});
 
 function setLanguage(lang) {
   language = lang;
+
+  localStorage.setItem("lang", lang);
+
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
     el.innerHTML = translations[lang][key] || `[${key}]`;
   });
 
-  // TODO: add en flag when on nl and vice versa
-  // if (language == "nl") {
-  //   enFlag;
-  // }
+  if (language == "nl") {
+    nlFlag.style.display = "none";
+    enFlag.style.display = "flex";
+  } else {
+    enFlag.style.display = "none";
+    nlFlag.style.display = "flex";
+  }
 }
 
 setLanguage(language);
