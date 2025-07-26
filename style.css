@@ -448,6 +448,10 @@ body.no-scroll {
   background: #ff0000;
 }
 
+.socials .insta-icon {
+  width: 50px;
+}
+
 .spacer-sm {
   width: 100%;
   height: 40px;
