@@ -242,6 +242,7 @@ const translations = {
     standUp: `The Huichelaar rises up for the cause that brings a neighborhood to life,
     connects people, and dares to break the monotony. We are putting pressure on municipalities and developers to lower rents for authentic entrepreneurs and are offering free campaign materials to those who truly want to contribute something that is needed. And for that, we need your help, fighter.`,
     emailNote: `We only use your email address to confirm your signature<br/>(and you will not receive a confirmation email)`,
+    instagram: `Make sure to follow De Huichelaer on Instagram!`,
     lostBusiness: `MEET THE <br/> LOST BUSINESSES`,
     become: `Become a Huichelaar yourself and order a poster of a non-existent toko or a T-shirt!`,
   },
@@ -262,6 +263,7 @@ const translations = {
     wil toevoegen waar behoefte aan is. En daar hebben we jouw hulp bij
     nodig strijder.`,
     emailNote: `We gebruiken je e-mailadres alleen om je handtekening te bevestigen<br/>(en je krijgt geen bevestigingsmail)`,
+    instagram: `Volg de huichelaer ook op Instagram`,
     lostBusiness: `MAAK KENNIS MET DE <br />
     VERLOREN ZAKEN`,
     become: `Word ook een Huichelaar en bestel een poster van een niet-bestaande

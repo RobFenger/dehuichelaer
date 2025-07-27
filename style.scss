@@ -538,8 +538,15 @@ $sliderDotWidth: 10px;
 // ---------------- Social icons ------------
 
 .socials {
+  display: flex;
+  flex-flow: row nowrap;
+  color: #ffe600;
+  font-family: $titleFontFamily;
+  font-size: 18px;
+
   .insta-icon {
-    width: 50px;
+    width: 25px;
+    margin-left: calc($padding / 2);
   }
 }
 

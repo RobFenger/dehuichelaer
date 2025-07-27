@@ -448,8 +448,16 @@ body.no-scroll {
   background: #ff0000;
 }
 
+.socials {
+  display: flex;
+  flex-flow: row nowrap;
+  color: #ffe600;
+  font-family: "druktexttrial-medium";
+  font-size: 18px;
+}
 .socials .insta-icon {
-  width: 50px;
+  width: 25px;
+  margin-left: 15px;
 }
 
 .spacer-sm {
